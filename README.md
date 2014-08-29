@@ -26,13 +26,16 @@ A very basic model has been added to the Faq route for demo purposes.
 
 * `ember server` will run the application at http://localhost:4200.
 
+## Building
+Builds to the /dist directory
+
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+
 ## Running Tests
 
 * `ember test`
 * `ember test --server`
 
-## Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
 
