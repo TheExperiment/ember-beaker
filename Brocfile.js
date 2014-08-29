@@ -4,6 +4,23 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+
+app.import({
+  development: 'vendor/ember-data/ember-data.js',
+  production:  'vendor/ember-data/ember-data.prod.js'
+}, {
+  'ember-data': [
+    'default'
+  ]
+});
+
+
+
+app.import( 'vendor/ember-states-shim/ember-states.js');
+app.import( 'vendor/foundation/js/foundation.js');
+
+
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

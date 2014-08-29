@@ -3,7 +3,8 @@
     "document": true,
     "window": true,
     "-Promise": true,
-    "EmberBeakerENV": true
+    "EmberBeakerENV": true,
+    "$": true
   },
   "browser" : true,
   "boss" : true,

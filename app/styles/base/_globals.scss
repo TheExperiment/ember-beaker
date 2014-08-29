@@ -1,0 +1,99 @@
+$bgColor: #eee;
+$darkColor: #222;
+$darkColor50: rgba(6, 6, 6, .50);
+$highlightColor: red;
+$lightColor: #dedede;
+$lightColor50: rgba(223, 236, 230, .50);
+$borderColor: #494547;
+
+
+@mixin transition($duration,$ease:$linear,$prop:all,$delay:0)
+{
+  -webkit-transition: $prop $duration $delay $ease;
+  -moz-transition: $prop $duration $delay $ease;
+  -o-transition: $prop $duration $delay $ease;
+  -ms-transition: $prop $duration $delay $ease;
+  transition: $prop $duration $delay $ease;
+
+  -moz-transition-duration: $duration;
+  -moz-transition-property:$prop;
+  -moz-transition-delay:$delay;
+}
+@mixin rounded($radius)
+{
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin box-sizing{
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin opacity($alpha)
+{
+  opacity: $alpha;
+  -moz-opacity: $alpha;
+  filter:alpha(opacity=$alpha);
+}
+@mixin transform($transform)
+{
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+  @include hideBackface;
+}
+@mixin centerH{
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+@mixin centerV{
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+// REMOVE IF THERE IS NO 3D
+@mixin transform-origin($transformOrigin)
+{
+  -webkit-transform-origin:$transformOrigin;
+  -moz-transform-origin:$transformOrigin;
+}
+@mixin perspective-origin($perspective)
+{
+  -webkit-perspective-origin:$perspective;
+  -moz-perspective-origin:$perspective;
+  -o-perspective-origin:$perspective;
+  perspective-origin:$perspective;
+}
+@mixin preserve3d{
+  -webkit-transform-style:preserve-3d;
+  -moz-transform-style:preserve-3d;
+  -o-transform-style:preserve-3d;
+  transform-style:preserve-3d;
+}
+@mixin hideBackface{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@mixin showBackface{
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -o-backface-visibility: visible;
+  backface-visibility: visible;
+}
+// END REMOVE IF THERE IS NO 3D
+
+@mixin headline-font($size)
+{
+  font-size: $size;
+  font-family: $headline-font;
+}
+$headline-font: 'Helvetica', sans-serif;
+@mixin body-font($size)
+{
+  font-size: $size;
+  font-family: 'museo-slab', 'Georgia', serif;
+}
