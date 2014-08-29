@@ -1,51 +1,38 @@
 # Ember-beaker
 
-This README outlines the details of collaborating on this Ember application.
+Ember-beaker is the starting point for any ember based project from The Experiment.  
 
-A short introduction of this app could easily go here.
+The standard project has been customized to include ember-data, ember-states, and zurbs foundation 5.  
 
-## Prerequisites
+The project is also setup to use SASS.  App.scss is used to include individual scss files included in the styles/base directory. 
 
-You will need the following things properly installed on your computer.
+.jshintrc has been modified to allow use of $ for Jquery. 
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
+Routing
+Contains some basic routing examples using /about and /faq.  
+
+Model
+A very basic model has been added to the Faq route for demo purposes.
+
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+* `git clone` this repository
+* cd into project directory
+* run `npm install` 
+* run `bower install`
 
-## Running / Development
+## Running
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+* `ember server` will run the application at http://localhost:4200.
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
+## Running Tests
 
 * `ember test`
 * `ember test --server`
 
-### Building
+## Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* ember: http://emberjs.com/
-* ember-cli: http://www.ember-cli.com/
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
